@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # This exploit template was generated via:
-# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11007
+# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 110018
 from pwn import *
-import hashlib
 
 # Set up pwntools for the correct architecture
 context.update(arch='i386')
@@ -15,7 +14,7 @@ exe = './path/to/binary'
 # ./exploit.py DEBUG NOASLR
 # ./exploit.py GDB HOST=example.com PORT=4141 EXE=/tmp/executable
 host = args.HOST or 'ic.catedras.linti.unlp.edu.ar'
-port = int(args.PORT or 11007)
+port = int(args.PORT or 11018)
 
 
 def start_local(argv=[], *a, **kw):
@@ -50,18 +49,24 @@ continue
 #                    EXPLOIT GOES HERE
 #===========================================================
 
+import libnum
+import sympy
 io = start()
 
-io.readuntil('rockyou.txt):\n')
+io.readuntil('Hellman:\n')
 
-contraseña_hasheada = io.readline().decode().strip()
+p = int(io.readline().decode().strip().split()[1])
 
+g = int(io.readline().decode().strip('=')[2])
 
-with open( 'rockyou_100.txt', 'rb') as f:
-    contraseña_obtenida = [contraseña.strip() for contraseña in f if hashlib.sha256(contraseña.strip()).hexdigest() == contraseña_hasheada][0]
+public_alice = int(io.readline().decode().strip().split()[1])
 
+private_bob = int(io.readline().decode().strip().split()[1])
 
-io.send(contraseña_obtenida)
+clave_compartida = pow(public_alice, private_bob, p)
+
+io.send(str(clave_compartida).encode())
+
 
 # shellcode = asm(shellcraft.sh())
 # payload = fit({

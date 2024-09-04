@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # This exploit template was generated via:
-# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11007
+# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11015
 from pwn import *
-import hashlib
 
 # Set up pwntools for the correct architecture
 context.update(arch='i386')
@@ -15,7 +14,7 @@ exe = './path/to/binary'
 # ./exploit.py DEBUG NOASLR
 # ./exploit.py GDB HOST=example.com PORT=4141 EXE=/tmp/executable
 host = args.HOST or 'ic.catedras.linti.unlp.edu.ar'
-port = int(args.PORT or 11007)
+port = int(args.PORT or 11015)
 
 
 def start_local(argv=[], *a, **kw):
@@ -50,27 +49,47 @@ continue
 #                    EXPLOIT GOES HERE
 #===========================================================
 
+import binascii
+
+
+def descifrar_xor(mensaje, clave):
+    return ''.join(chr(byte ^ clave) for byte in mensaje)
+
+def hex_to_bytes(hex_string):
+    return binascii.unhexlify(hex_string)
+
 io = start()
 
-io.readuntil('rockyou.txt):\n')
 
-contraseña_hasheada = io.readline().decode().strip()
-
-
-with open( 'rockyou_100.txt', 'rb') as f:
-    contraseña_obtenida = [contraseña.strip() for contraseña in f if hashlib.sha256(contraseña.strip()).hexdigest() == contraseña_hasheada][0]
+io.readuntil("es:\n")
 
 
-io.send(contraseña_obtenida)
+palabra_inicial = io.readline().strip()  
+texto_cifrado = io.readline().strip()
 
-# shellcode = asm(shellcraft.sh())
-# payload = fit({
-#     32: 0xdeadbeef,
-#     'iaaa': [1, 2, 'Hello', 3]
-# }, length=128)
-# io.send(payload)
-# flag = io.recv(...)
-# log.success(flag)
+print(palabra_inicial)
+print(texto_cifrado)
+
+
+texto_cifrado = texto_cifrado.decode()
+
+print(texto_cifrado)
+
+key_correcta = b''
+
+for i in range(4**8):
+    
+    
+    primera_parte = (descifrar_xor(palabra_inicial,i)).encode().hex()
+    
+    if (texto_cifrado.startswith(primera_parte)):
+        key_correcta = i
+        print("ENCONTRE")
+        break
+
+texto_descencriptado = descifrar_xor(binascii.unhexlify(texto_cifrado.encode()),key_correcta)
+
+
 
 io.interactive()
 

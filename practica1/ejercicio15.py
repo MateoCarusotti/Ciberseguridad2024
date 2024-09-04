@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # This exploit template was generated via:
-# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11007
+# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11017
 from pwn import *
-import hashlib
 
 # Set up pwntools for the correct architecture
 context.update(arch='i386')
@@ -15,7 +14,7 @@ exe = './path/to/binary'
 # ./exploit.py DEBUG NOASLR
 # ./exploit.py GDB HOST=example.com PORT=4141 EXE=/tmp/executable
 host = args.HOST or 'ic.catedras.linti.unlp.edu.ar'
-port = int(args.PORT or 11007)
+port = int(args.PORT or 11017)
 
 
 def start_local(argv=[], *a, **kw):
@@ -50,18 +49,44 @@ continue
 #                    EXPLOIT GOES HERE
 #===========================================================
 
+import libnum
+from sympy import factorint
+
+
 io = start()
 
-io.readuntil('rockyou.txt):\n')
+io.readuntil('texto:\n')
 
-contraseña_hasheada = io.readline().decode().strip()
+n = int(io.readline().split()[1].decode())
+
+e = int(io.readline().split()[1].decode())
+
+c = int(io.readline().split()[1].decode())
 
 
-with open( 'rockyou_100.txt', 'rb') as f:
-    contraseña_obtenida = [contraseña.strip() for contraseña in f if hashlib.sha256(contraseña.strip()).hexdigest() == contraseña_hasheada][0]
+factors = factorint(n)
+
+factors = list(factors.keys())
+
+print(factors)
+
+p= factors[0]
+q = factors[1]
 
 
-io.send(contraseña_obtenida)
+n = p * q
+
+
+phi_n = (p - 1) * (q - 1)
+
+d = libnum.invmod(e, phi_n)
+
+
+M = pow(c, d, n)
+
+M = libnum.n2s(M)
+
+print(f'Mensaje descifrado: {M}')
 
 # shellcode = asm(shellcraft.sh())
 # payload = fit({
@@ -71,6 +96,8 @@ io.send(contraseña_obtenida)
 # io.send(payload)
 # flag = io.recv(...)
 # log.success(flag)
+
+io.send(M)
 
 io.interactive()
 
