@@ -67,15 +67,5 @@ clave_compartida = pow(public_alice, private_bob, p)
 
 io.send(str(clave_compartida).encode())
 
-
-# shellcode = asm(shellcraft.sh())
-# payload = fit({
-#     32: 0xdeadbeef,
-#     'iaaa': [1, 2, 'Hello', 3]
-# }, length=128)
-# io.send(payload)
-# flag = io.recv(...)
-# log.success(flag)
-
 io.interactive()
 

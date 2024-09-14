@@ -52,7 +52,6 @@ continue
 import libnum
 from sympy import factorint
 
-
 io = start()
 
 io.readuntil('texto:\n')
@@ -63,7 +62,6 @@ e = int(io.readline().split()[1].decode())
 
 c = int(io.readline().split()[1].decode())
 
-
 factors = factorint(n)
 
 factors = list(factors.keys())
@@ -73,29 +71,17 @@ print(factors)
 p= factors[0]
 q = factors[1]
 
-
 n = p * q
-
 
 phi_n = (p - 1) * (q - 1)
 
 d = libnum.invmod(e, phi_n)
-
 
 M = pow(c, d, n)
 
 M = libnum.n2s(M)
 
 print(f'Mensaje descifrado: {M}')
-
-# shellcode = asm(shellcraft.sh())
-# payload = fit({
-#     32: 0xdeadbeef,
-#     'iaaa': [1, 2, 'Hello', 3]
-# }, length=128)
-# io.send(payload)
-# flag = io.recv(...)
-# log.success(flag)
 
 io.send(M)
 

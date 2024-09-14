@@ -52,8 +52,8 @@ continue
 import binascii
 
 
-def descifrar_xor(mensaje, clave):
-    return ''.join(chr(byte ^ clave) for byte in mensaje)
+def cifrar_xor(mensaje, clave):
+    return bytes(byte ^ clave for byte in mensaje)
 
 def hex_to_bytes(hex_string):
     return binascii.unhexlify(hex_string)
@@ -67,29 +67,32 @@ io.readuntil("es:\n")
 palabra_inicial = io.readline().strip()  
 texto_cifrado = io.readline().strip()
 
-print(palabra_inicial)
-print(texto_cifrado)
+print(type(palabra_inicial))
+print(type(texto_cifrado))
 
 
 texto_cifrado = texto_cifrado.decode()
 
-print(texto_cifrado)
+print(type(texto_cifrado))
 
-key_correcta = b''
 
-for i in range(4**8):
-    
-    
-    primera_parte = (descifrar_xor(palabra_inicial,i)).encode().hex()
-    
-    if (texto_cifrado.startswith(primera_parte)):
-        key_correcta = i
-        print("ENCONTRE")
+texto_cifrado_bytes = binascii.unhexlify(texto_cifrado)
+
+print(type(texto_cifrado_bytes))
+
+print((texto_cifrado_bytes))
+
+key_buscada = b''
+
+for key in range(2**32):
+    key_usada = key % 256
+    resultado = cifrar_xor(texto_cifrado_bytes,key_usada)
+    if (key == 1):
+        print(type(resultado))
+    if(binascii.hexlify(palabra_inicial) in binascii.hexlify(texto_cifrado_bytes)):
+        key_buscada = key_usada
+        print(f"Encontre la key es:{key_buscada}")
         break
-
-texto_descencriptado = descifrar_xor(binascii.unhexlify(texto_cifrado.encode()),key_correcta)
-
-
 
 io.interactive()
 

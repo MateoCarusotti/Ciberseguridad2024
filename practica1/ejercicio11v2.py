@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # This exploit template was generated via:
-# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11012
+# $ pwn template --host ic.catedras.linti.unlp.edu.ar --port 11015
 from pwn import *
 
 # Set up pwntools for the correct architecture
@@ -14,7 +14,7 @@ exe = './path/to/binary'
 # ./exploit.py DEBUG NOASLR
 # ./exploit.py GDB HOST=example.com PORT=4141 EXE=/tmp/executable
 host = args.HOST or 'ic.catedras.linti.unlp.edu.ar'
-port = int(args.PORT or 11012)
+port = int(args.PORT or 11015)
 
 
 def start_local(argv=[], *a, **kw):
@@ -49,39 +49,54 @@ continue
 #                    EXPLOIT GOES HERE
 #===========================================================
 
-import libnum
+import binascii
+
+
+def cifrar_xor(mensaje, clave):
+    return bytes(byte ^ clave for byte in mensaje)
+
+def hex_to_bytes(hex_string):
+    return binascii.unhexlify(hex_string)
 
 io = start()
 
-io.readuntil('texto:\n')
 
-p = int(io.readline().split()[1].decode())
+io.readuntil("es:\n")
 
-q = int(io.readline().split()[1].decode())
 
-e = int(io.readline().split()[1].decode())
+palabra_inicial = io.readline().strip()  
+texto_cifrado = io.readline().strip()
 
-c = int(io.readline().split()[1].decode())
+print(type(palabra_inicial))
+print(type(texto_cifrado))
 
-n = p * q
-phi_n = (p - 1) * (q - 1)
 
-d = libnum.invmod(e, phi_n)
+texto_cifrado = texto_cifrado.decode()
 
-M = pow(c, d, n)
+texto_cifrado = texto_cifrado[:int(len(texto_cifrado) / 2)]
 
-M = libnum.n2s(M)
+print(f"leng es {len(texto_cifrado)}")
 
-io.send(M)
+print(type(texto_cifrado))
 
-# shellcode = asm(shellcraft.sh())
-# payload = fit({
-#     32: 0xdeadbeef,
-#     'iaaa': [1, 2, 'Hello', 3]
-# }, length=128)
-# io.send(payload)
-# flag = io.recv(...)
-# log.success(flag)
+
+texto_cifrado_bytes = texto_cifrado.encode()
+
+###texto_cifrado_bytes = binascii.unhexlify(texto_cifrado)
+
+print(type(texto_cifrado_bytes))
+
+print((texto_cifrado_bytes))
+
+key_buscada = b''
+
+for key in range(2**32):
+    key_usada = key % 256
+    resultado = cifrar_xor(texto_cifrado_bytes,key_usada)
+    if(binascii.hexlify(palabra_inicial) in binascii.hexlify(resultado)):
+        key_buscada = key_usada
+        print(f"Encontre la key es:{key_buscada}")
+        break
 
 io.interactive()
 

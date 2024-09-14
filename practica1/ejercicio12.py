@@ -12,8 +12,14 @@ phi_n = (p - 1) * (q - 1)
 d = libnum.invmod(e, phi_n)
 
 
+print(d)
+
 M = pow(C, d, n)
 
+print(M)
+
 M = libnum.n2s(M)
+
+
 
 print(f'Mensaje descifrado: {M}')
