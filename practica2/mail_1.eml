@@ -1,0 +1,151 @@
+Return-Path: <info@apdes.esc.edu.ar>
+X-Original-To: nmacia@linti.unlp.edu.ar
+Delivered-To: nmacia@linti.unlp.edu.ar
+Received: by mail.linti.unlp.edu.ar (Postfix)
+	id 7F160A2514; Thu, 16 Sep 2021 23:32:04 -0300 (-03)
+Delivered-To: nmacia@linti.unlp.edu.ar
+Received: from localhost (localhost [127.0.0.1])
+	by mail.linti.unlp.edu.ar (Postfix) with ESMTP id 79076A2513
+	for <nmacia@linti.unlp.edu.ar>; Thu, 16 Sep 2021 23:32:04 -0300 (-03)
+X-Virus-Scanned: Debian amavisd-new at mail.linti.unlp.edu.ar
+Received: from mail.linti.unlp.edu.ar ([127.0.0.1])
+	by localhost (mail.linti.unlp.edu.ar [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id x2vK97o27NbM for <nmacia@linti.unlp.edu.ar>;
+	Thu, 16 Sep 2021 23:32:01 -0300 (-03)
+X-Greylist: delayed 6020 seconds by postgrey-1.36 at mail; Thu, 16 Sep 2021 23:32:00 -03
+Received: from mail.unla.edu.ar (mail.unla.edu.ar [170.78.184.2])
+	by mail.linti.unlp.edu.ar (Postfix) with ESMTP id 083F6A2512
+	for <nmacia@linti.unlp.edu.ar>; Thu, 16 Sep 2021 23:32:00 -0300 (-03)
+Received: (qmail 103384 invoked from network); 16 Sep 2021 21:09:49 -0300
+Received: by simscan 1.4.0 ppid: 103381, pid: 103382, t: 0.0026s
+         scanners: regex: 1.4.0 attach: 1.4.0
+Received: from unknown (HELO mail.unla.edu.ar) ([10.3.6.28])
+          (envelope-sender <info@apdes.esc.edu.ar>)
+          by mail.unla.edu.ar (qmail-ldap-1.03) with compressed SMTP
+          for <nmacia@linti.unlp.edu.ar>; 16 Sep 2021 21:09:49 -0300
+Received: (qmail 18104 invoked from network); 17 Sep 2021 00:09:49 -0000
+Received: by simscan 1.4.0 ppid: 3612, pid: 18083, t: 0.6224s
+         scanners:none
+Received: from unknown (HELO DESKTOP-I0RV5Q8) (ceil@[37.120.193.247])
+          (envelope-sender <info@apdes.esc.edu.ar>)
+          by mail.unla.edu.ar (qmail-ldap-1.03) with SMTP
+          for <nmacia@linti.unlp.edu.ar>; 17 Sep 2021 00:09:49 -0000
+From: "ADMINISTRADOR DE CORREO WEB." <info@apdes.esc.edu.ar>
+Subject: Aviso urgente (nmacia@linti.unlp.edu.ar)
+To: nmacia@linti.unlp.edu.ar
+Content-Type: multipart/alternative; charset="ISO-8859-1"; boundary="WJtgnWu9n7wmQR2jUmaUyV4iI=_LiXRZBr0"
+MIME-Version: 1.0
+Reply-To: update81-01@yahoo.com
+Date: Thu, 16 Sep 2021 19:09:48 -0500
+Message-ID: <548086646334387544@SMTP.unla.edu.ar>
+X-Spam-Status: No, score=3.9 required=6.0 tests=FREEMAIL_FORGED_REPLYTO,
+	FREEMAIL_REPLYTO_END_DIGIT,HTML_MESSAGE,PHISHING_PHRASE_1,
+	RCVD_IN_DNSWL_MED,SPF_HELO_PASS,SPF_SOFTFAIL,UNPARSEABLE_RELAY
+	autolearn=no autolearn_force=no version=3.4.2
+X-Spam-Level: ***
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on
+	mail.cert.unlp.edu.ar
+
+This is a multi-part message in MIME format
+
+--WJtgnWu9n7wmQR2jUmaUyV4iI=_LiXRZBr0
+Content-Type: text/plain ; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Actualmente estamos mejorando nuestro centro de correo web debido a la=
+ congesti=F3n. Estamos eliminando todas las cuentas de correo web no u=
+tilizadas y creando m=E1s espacio para otras nuevas. Para asegurarse d=
+e que no experimente una interrupci=F3n del servicio durante este per=ED=
+odo, deber=E1 proporcionar la siguiente informaci=F3n:
+
+CONFIRME SU CUENTA WEBMAlL
+
+1. CORRE0 ELECTR=D3NICO: {nmacia@linti.unlp.edu.ar}
+2. CONTRASE=D1A:
+3. CONFIRMAR CONTRASE=D1A:
+4. N=DAMERO DE TEL=C9F0NO:
+=20
+Responda a este mensaje para que podamos ofrecerle mejores servicios e=
+n l=EDnea con mejoras en nuestra funcionalidad de correo web.
+
+Disculpe las molestias que esto pueda ocasionarle.
+
+Gracias!
+
+Administrador de correo web.
+
+--WJtgnWu9n7wmQR2jUmaUyV4iI=_LiXRZBr0
+Content-Type: text/html ; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
+WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial"><SPAN style=3D'FONT-SIZE: small; FONT-FAMILY: "Century =
+Gothic"'><FONT size=3D2>Actualmente estamos mejorando nuestro centro d=
+e correo web debido a la congesti=F3n. Estamos eliminando todas las cu=
+entas de correo web no utilizadas y creando m=E1s espacio para otras n=
+uevas. Para asegurarse de que no experimente una interrupci=F3n del se=
+rvicio durante este per=EDodo, deber=E1 proporcionar la siguiente info=
+rmaci=F3n:</FONT></SPAN></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
+WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial"><SPAN style=3D'FONT-SIZE: small; FONT-FAMILY: "Century =
+Gothic"'><FONT size=3D2>CONFIRME SU CUENTA WEBMAlL</FONT></SPAN></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
+WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial"><SPAN style=3D'FONT-SIZE: small; FONT-FAMILY: "Century =
+Gothic"'><FONT size=3D2>1. CORRE0 ELECTR=D3NICO: {nmacia@linti.unlp.ed=
+u.ar}<BR>2. CONTRASE=D1A:<BR>3. CONFIRMAR CONTRASE=D1A:<BR>4. N=DAMERO=
+ DE TEL=C9F0NO:<BR>&nbsp;<BR>Responda a este mensaje para que podamos =
+ofrecerle mejores servicios en l=EDnea con mejoras en nuestra funciona=
+lidad de correo web.</FONT></SPAN></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
+WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial"><SPAN style=3D'FONT-SIZE: small; FONT-FAMILY: "Century =
+Gothic"'><FONT size=3D2>Disculpe las molestias que esto pueda ocasiona=
+rle.</FONT></SPAN></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
+WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial"><SPAN style=3D'FONT-SIZE: small; FONT-FAMILY: "Century =
+Gothic"'><FONT size=3D2>Gracias!</FONT></SPAN></P>
+<P style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-=
+WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; TEXT-ALIGN: lef=
+t; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial"><SPAN style=3D'FONT-SIZE: small; FONT-FAMILY: "Century =
+Gothic"'><FONT size=3D2>Administrador de correo web.</FONT></SPAN></P>=
+</BODY></HTML>
+
+--WJtgnWu9n7wmQR2jUmaUyV4iI=_LiXRZBr0--
+
