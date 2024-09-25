@@ -1,0 +1,6 @@
+# grep sshd.\*Failed /var/log/auth.log
+Aug 18 23:08:26 sshd[768]: Failed password for root from 91.205.189.15 port 38156 ssh2	
+Aug 18 23:08:30 sshd[770]: Failed password for nobody from 91.205.189.15 port 38556 ssh2
+Aug 18 23:08:34 sshd[772]: Failed password for invalid user asterisk from 91.205.189.15 port 38864 ssh2
+Aug 18 23:08:38 sshd[774]: Failed password for invalid user sjobeck from 91.205.189.15 port 39157 ssh2
+Aug 18 23:08:42 sshd[776]: Failed password for root from 91.205.189.15 port 39467 ssh2
